@@ -1,101 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
 
-*{
-    box-sizing: border-box;
+* {
+	box-sizing: border-box;
 }
-html{
-    height: 100%;
+html {
+	height: 100%;
 }
-body{
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    height: 100%;
-    display: grid;
-    grid-template-rows: 3rem auto fit-content(8rem);
+body {
+	font-family: "Roboto", sans-serif;
+	margin: 0;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 3rem auto fit-content(8rem);
 }
-.main-header{
-    width: 100%;
-    background-color: rgba(45,45,45,0.98);
-    color: white;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.4rem;
-    font-size: 2rem;
-    font-variant: small-caps;
-    text-transform: capitalize;   
-    grid-row: 1/2; 
-    display: flex;
-    justify-content: center;
-    align-items: center;  
+.main-header {
+	width: 100%;
+	background-color: rgba(45, 45, 45, 0.98);
+	color: white;
+	font-weight: bold;
+	font-family: "Roboto", sans-serif;
+	letter-spacing: 0.4rem;
+	font-size: 2rem;
+	font-variant: small-caps;
+	text-transform: capitalize;
+	grid-row: 1/2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.section-head__title{
-    text-align: center;
-    font-family: 'Major Mono Display', monospace;
+.section-head__title {
+	text-align: center;
+	font-family: "Major Mono Display", monospace;
 }
-.main-image{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.main-image {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
-.main-image img{
-    height: 10rem;
-    border-radius: 50%;
-    width: 10rem;
-    
+.main-image img {
+	height: 10rem;
+	border-radius: 50%;
+	width: 10rem;
 }
-.main__quote{
-    width: 80%;
-    margin: auto;
-    color: #737373;
+.main__quote {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	color: #737373;
+	font-size: 1.3rem;
 }
-.main-content{
-    grid-row: 2/3;
+.main-content {
+	grid-row: 2/3;
 }
-.timeline{
-  width: 89%;
-  margin: auto;
-  padding: 0;
-  margin-bottom: 2rem;
+.timeline {
+	width: 89%;
+	max-width: 72rem;
+	margin: auto;
+	padding: 0;
+	margin-bottom: 2rem;
 }
-.timeline-content{
-    padding: 0;
-    margin: 0;
-    
+.timeline-content {
+	padding: 0;
+	margin: 0;
 }
 
-.event-date{
-    display: inline-block;
-    font-weight: bold;
-    font-size: 0.9rem;
-    width: 25%;
-    height: 100%;
-    margin: 0;
-    border-top: solid 3px #737373;
-    vertical-align: top;
-    padding: 1rem 0;
+.event-date {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 0.9rem;
+	width: 25%;
+	height: 100%;
+	margin: 0;
+	border-top: solid 3px #737373;
+	vertical-align: top;
+	padding: 1rem;
+	padding-right: 0;
 }
-.event-desc{
-    display: inline-block;
-    width: 73%;
-    margin: 0;
-    border-top: solid 3px #737373;
-    background-color: #d9d9d9;
-    padding: 1rem;
+.event-desc {
+	display: inline-block;
+	width: 73%;
+	margin: 0;
+	border-top: solid 3px #737373;
+	background-color: #d9d9d9;
+	padding: 1rem;
 }
 .event-date:first-of-type,
-#event-desc-first{
-    border-top: none;
-    
+#event-desc-first {
+	border-top: none;
 }
-.main-footer{
-    text-align: center;
-    background-color: rgba(45,45,45,0.98);
-    color: white;
-    grid-row: 3/4;
+.conclusion {
+	width: 89%;
+	margin: auto;
+	text-align: center;
+	font-size: 1.2rem;
 }
-.main-footer__content{
-    padding: 1rem;
+.conclusion a {
+	text-decoration: none;
+}
+.main-footer {
+	text-align: center;
+	background-color: rgba(45, 45, 45, 0.98);
+	color: white;
+	grid-row: 3/4;
+}
+.main-footer__content {
+	padding: 1rem;
     font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+@media only screen and (min-width: 48rem) {
+	body {
+		grid-template-rows: 4rem auto fit-content(8rem);
+	}
+	.main-header {
+		letter-spacing: 0.4rem;
+		font-size: 2.3rem;
+    }
+    .section-head__title{
+        font-size: 1.7rem;
+    }
 }
