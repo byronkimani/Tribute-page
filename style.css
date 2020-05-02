@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
 
 * {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 html {
 	height: 100%;
@@ -11,7 +12,9 @@ body {
 	font-family: "Roboto", sans-serif;
 	margin: 0;
 	height: 100%;
+	display: -ms-grid;
 	display: grid;
+	-ms-grid-rows: 3rem auto fit-content(8rem);
 	grid-template-rows: 3rem auto fit-content(8rem);
 }
 .main-header {
@@ -24,10 +27,18 @@ body {
 	font-size: 2rem;
 	font-variant: small-caps;
 	text-transform: capitalize;
+	-ms-grid-row: 1;
+	-ms-grid-row-span: 1;
 	grid-row: 1/2;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 .section-head__title {
 	text-align: center;
@@ -35,9 +46,16 @@ body {
 }
 .main-image {
 	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 .main-image img {
 	height: 10rem;
@@ -52,6 +70,8 @@ body {
 	font-size: 1.3rem;
 }
 .main-content {
+	-ms-grid-row: 2;
+	-ms-grid-row-span: 1;
 	grid-row: 2/3;
 }
 .timeline {
@@ -103,6 +123,8 @@ body {
 	text-align: center;
 	background-color: rgba(45, 45, 45, 0.98);
 	color: white;
+	-ms-grid-row: 3;
+	-ms-grid-row-span: 1;
 	grid-row: 3/4;
 }
 .main-footer__content {
@@ -113,6 +135,7 @@ body {
 
 @media only screen and (min-width: 48rem) {
 	body {
+		-ms-grid-rows: 4rem auto fit-content(8rem);
 		grid-template-rows: 4rem auto fit-content(8rem);
 	}
 	.main-header {
